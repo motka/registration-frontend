@@ -1,0 +1,86 @@
+
+<table mat-table [dataSource]="data" class="mat-elevation-z8 demo-table">
+    <!-- Position Column -->
+    <ng-container matColumnDef="firstname">
+      <th mat-header-cell *matHeaderCellDef>First Name</th>
+      <td mat-cell *matCellDef="let element">{{element.firstname}}</td>
+    </ng-container>
+    <ng-container matColumnDef="lastname">
+        <th mat-header-cell *matHeaderCellDef>Last Name</th>
+        <td mat-cell *matCellDef="let element">{{element.lastname}}</td>
+    </ng-container>
+    <ng-container matColumnDef="gender">
+        <th mat-header-cell *matHeaderCellDef>Gender</th>
+        <td mat-cell *matCellDef="let element">{{element.gender}}</td>
+    </ng-container>
+    <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef>Address</th>
+        <td mat-cell *matCellDef="let element">{{element.address}}</td>
+    </ng-container>
+    <ng-container matColumnDef="city">
+        <th mat-header-cell *matHeaderCellDef>City</th>
+        <td mat-cell *matCellDef="let element">{{element.city}}</td>
+    </ng-container>
+    <ng-container matColumnDef="state">
+        <th mat-header-cell *matHeaderCellDef>State</th>
+        <td mat-cell *matCellDef="let element">{{element.state}}</td>
+    </ng-container>
+    <ng-container matColumnDef="zip">
+        <th mat-header-cell *matHeaderCellDef>Zip Code</th>
+        <td mat-cell *matCellDef="let element">{{element.zip}}</td>
+    </ng-container>
+    <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef>Phone</th>
+        <td mat-cell *matCellDef="let element">{{element.phone}}</td>
+    </ng-container>
+    <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>Email</th>
+        <td mat-cell *matCellDef="let element">{{element.email}}</td>
+    </ng-container>
+    <ng-container matColumnDef="ageGroup">
+        <th mat-header-cell *matHeaderCellDef>Age Group</th>
+        <td mat-cell *matCellDef="let element">{{element.ageGroup}}</td>
+    </ng-container>
+    <ng-container matColumnDef="contactName">
+        <th mat-header-cell *matHeaderCellDef>Contact Name</th>
+        <td mat-cell *matCellDef="let element">{{element.contactName}}</td>
+    </ng-container>
+    <ng-container matColumnDef="contactPhone">
+        <th mat-header-cell *matHeaderCellDef>Contact Phone Number</th>
+        <td mat-cell *matCellDef="let element">{{element.contactPhone}}</td>
+    </ng-container>
+    <ng-container matColumnDef="contactRelationship">
+        <th mat-header-cell *matHeaderCellDef>Contact Relation</th>
+        <td mat-cell *matCellDef="let element">{{element.contactRelationship}}</td>
+    </ng-container>
+    <ng-container matColumnDef="classDuration">
+        <th mat-header-cell *matHeaderCellDef>Class Duration</th>
+        <td mat-cell *matCellDef="let element">{{element.classDuration}}</td>
+    </ng-container>
+    <ng-container matColumnDef="isGoodHealth">
+        <th mat-header-cell *matHeaderCellDef>Good Health</th>
+        <td mat-cell *matCellDef="let element">{{element.isGoodHeath}}</td>
+    </ng-container>
+    <ng-container matColumnDef="healthInformation">
+        <th mat-header-cell *matHeaderCellDef>Health Explaination</th>
+        <td mat-cell *matCellDef="let element">{{element.healthInformation}}</td>
+    </ng-container>
+    <ng-container matColumnDef="healthInsuranceCompany">
+        <th mat-header-cell *matHeaderCellDef>Health Insurance Company</th>
+        <td mat-cell *matCellDef="let element">{{element.healthInsuranceCompany}}</td>
+    </ng-container>
+    <ng-container matColumnDef="pastAttendance">
+        <th mat-header-cell *matHeaderCellDef>Past Atendance</th>
+        <td mat-cell *matCellDef="let element">{{element.pastAttendance}}</td>
+    </ng-container>
+    <ng-container matColumnDef="paymentType">
+        <th mat-header-cell *matHeaderCellDef>Payment Type</th>
+        <td mat-cell *matCellDef="let element">{{element.paymentType}}</td>
+    </ng-container>
+    <ng-container matColumnDef="paymentCode">
+        <th mat-header-cell *matHeaderCellDef>Payment Code</th>
+        <td mat-cell *matCellDef="let element">{{element.paymentCode}}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

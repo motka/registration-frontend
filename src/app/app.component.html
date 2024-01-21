@@ -1,0 +1,8 @@
+<mat-toolbar class="nav-bar" color="primary">
+    <div>TATHAGATA MEDITATION CENTER</div>
+    <div>
+      <span><a [routerLink]="['/showRegistration']" (click)="navigateTo('/showRegistration')">Registration</a></span>
+      <span><a [routerLink]="['/showReport']" (click)="navigateTo('/showReport')">Report</a></span>
+    </div>
+  </mat-toolbar>
+<router-outlet></router-outlet>

@@ -1,0 +1,23 @@
+.nav-bar {
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif; /* Change font */
+    font-size: 14px; /* Change font size */
+}
+.nav-bar span {
+    padding-right: 1rem;
+}
+.nav-bar a{
+    text-decoration: none; /* Add underline to links */
+    color: rgb(190, 234, 254); 
+  }
+  
+  /* Styling hover effect */
+.nav-bar a:hover {
+    color: white; /* Change link color on hover */
+    text-decoration: none; /* Remove underline on hover */
+  }
+
+  
+  
+  
+  
