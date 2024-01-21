@@ -1,0 +1,16 @@
+
+  .main-form > .row {
+    margin: 5px; 
+  }
+.custom-row {
+  display:flex;
+  flex-direction: row;
+  justify-content: left;
+  }
+.custom-row > .item {
+    margin:10px;
+}
+.health-info{
+  display:flex;
+  flex-direction:column
+}

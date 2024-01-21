@@ -1,0 +1,125 @@
+<div class="main">
+<div class="form-title mat-subheading-3">
+    <div>Retreat Registration Application </div>
+    <div>Special Vipassanā Retreat from September 1 to October 30, 2023 </div>
+    <div>With Sayadaw U Thuzana </div>
+</div>
+<div class="main-form mat-subheading-1">
+    <p>I, the undersigned, would like to enroll in the Special Vipassanā Retreat at TMC as follows (please choose two options if possible: mark 1 for the first choice and 2 for the second one (just in case the first choice is not
+        available)):</p>
+    <mat-radio-group [(ngModel)]="classDuration">
+
+        <mat-radio-button value="60 nights">60 nights: 08/31 (5pm-9pm) to 10/30 (10/31 the latest)</mat-radio-button>
+        <mat-radio-button value="45 nights">45 nights(*): 09/16 (after 1 pm) to 10/30 (10/31 the latest)</mat-radio-button>
+        <mat-radio-button value="30 nights(*)">30 nights nights(*): 08/31 (5pm-9pm) to 09/30 (before noon) </mat-radio-button>
+        <mat-radio-button value="30 nights(*)">30 nights(*): 10/01 (after 1pm) to 10/30 (10/31 the latest)</mat-radio-button>
+        <mat-radio-button value="15 nights">15 nights: 08/31 (5pm-9pm) to 09/15 (before noon)</mat-radio-button>
+        
+    </mat-radio-group>
+    <mat-form-field floatLabel="always">
+        <mat-label>Last Name: </mat-label>
+        <input matInput id="lastname" [(ngModel)]="lastname">
+    </mat-form-field>
+    
+    <mat-form-field floatLabel="always">
+       <mat-label>First Name: </mat-label>
+       <input matInput id="firstname" [(ngModel)]="firstname">
+    </mat-form-field>
+     <mat-radio-group [(ngModel)]="gender">
+        <mat-radio-button value="male">Male</mat-radio-button>
+        <mat-radio-button value="monk">Monk</mat-radio-button>
+        <mat-radio-button value="female">Female</mat-radio-button>
+        <mat-radio-button value="nun">Nun</mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field floatLabel="always">
+        <mat-label>Address (Number and Street): </mat-label>
+        <input matInput id="address" [(ngModel)]="street">
+    </mat-form-field>
+
+    <div class="custom-row">
+        <mat-form-field floatLabel="always">
+            <mat-label>City:</mat-label>
+            <input matInput id="city" [(ngModel)]="city">
+        </mat-form-field>
+        <mat-form-field floatLabel="always">
+            <mat-label>State</mat-label>
+            <input matInput id="state" [(ngModel)]="state">
+        </mat-form-field>
+        <mat-form-field floatLabel="always">
+            <mat-label>Zip Code:</mat-label>
+            <input matInput id="zip" [(ngModel)]="zip">
+        </mat-form-field>
+    </div>
+    <div class = "custom-row">
+        <mat-form-field floatLabel="always">
+            <mat-label>Phone Number:</mat-label>
+            <input matInput id="phone" [(ngModel)]="phone">
+        </mat-form-field>
+        <mat-form-field floatLabel="always">
+            <mat-label>Email Address</mat-label>
+            <input matInput id="email" [(ngModel)]="email">
+        </mat-form-field>
+    </div>
+    Age:
+    <mat-radio-group [(ngModel)]="ageGroup">
+        <mat-radio-button value="18-19">18-19</mat-radio-button>
+        <mat-radio-button value="20-30">20-30</mat-radio-button>
+        <mat-radio-button value="30-40">30-40</mat-radio-button>
+        <mat-radio-button value="40-50">40-50</mat-radio-button>
+        <mat-radio-button value="50-60">50-60</mat-radio-button>
+        <mat-radio-button value="60-70">60-70</mat-radio-button>
+        <mat-radio-button value="70-80">70-80</mat-radio-button>
+        <mat-radio-button value="Over 80">80-90</mat-radio-button>
+    </mat-radio-group>
+
+    <div class = "custom-row mat-subheading-1">
+        <mat-form-field floatLabel="always">
+            <mat-label>Emergency Contact Name:</mat-label>
+            <input matInput id="contactName" [(ngModel)]="contactName">
+        </mat-form-field>
+        <mat-form-field floatLabel="always">
+            <mat-label>Phone Number</mat-label>
+            <input matInput id="contactPhone" [(ngModel)]="contactPhone">
+        </mat-form-field>
+        <mat-form-field floatLabel="always">
+            <mat-label>Relation</mat-label>
+            <input matInput id="contactRelationship" [(ngModel)]="contactRelationship">
+        </mat-form-field>
+    </div>
+    Health Information:
+    <div class="health-info">
+        <div>
+            <mat-checkbox [(ngModel)]="isGoodHealth" name="good">Good Health</mat-checkbox>
+        </div>     
+        <div>If not good, please state your current condition and medical need:</div>       
+        <mat-form-field>
+            <textarea matInput [(ngModel)]="healthInformation"></textarea>
+        </mat-form-field>
+        <mat-form-field floatLabel="always">
+            <mat-label>Health Insurance Company</mat-label>
+            <input matInput  [(ngModel)]="healthInsuranceCompany">
+        </mat-form-field>
+    </div>
+    <div>
+        <div>Mahasi Tradition Vipassanā retreats attended in the past: How Many Times, Where, When, How Long</div>
+        <mat-form-field>
+            <textarea matInput [(ngModel)]="pastAttendance"></textarea>
+        </mat-form-field>
+    </div>
+    <div class="row">
+    Retreat fee ($25 per day)
+    <mat-radio-group [(ngModel)]="paymentType">
+        <mat-radio-button value="cash">Cash</mat-radio-button>
+        <mat-radio-button value="check">Check</mat-radio-button>
+        <mat-radio-button value="zelle">Zelle</mat-radio-button>
+        <mat-radio-button value="paypal">Paypal</mat-radio-button>
+    </mat-radio-group>
+    <div class ="row">
+        <div class="main-container">
+            <button color="primary" (click)="submit()">Submit</button>
+        </div>
+    </div>
+</div>
+</div>
+    
