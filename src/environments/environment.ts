@@ -1,4 +1,4 @@
 export const environment = {
-    production: false,
-    apiUrl: 'http://localhost:8080/register', // Your API URL for development
-  };
+  production: true,
+  apiUrl: 'https://tmcregistration.azurewebsites.net/register', // Your API URL for development
+};
