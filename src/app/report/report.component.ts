@@ -13,7 +13,7 @@ export class ReportComponent implements OnInit{
   data: any[] = []
 
   displayedColumns: string[]=["classDuration","firstName", "lastName", "gender", "address", "city", "state", "zip",
-    "phoneNumber", "email", "ageGroup", "contactName", "contactPhone", "contactRelationship", "isGoodHealth",
+    "phoneNumber", "email", "ageGroup", "contactName", "contactPhone", "contactRelationship", "goodHealth",
     "healthInformation", "healthInsuranceCompany", "pastAttendance", "paymentType", "paymentCode"]
 
   constructor(private http: HttpClient, private router:Router) {
