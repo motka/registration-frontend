@@ -16,7 +16,7 @@ export class RegistrationFormComponent implements OnInit{
   city: string = '';
   state: string = '';
   zip: string = '';
-  phone: string ='';
+  phoneNumber: string ='';
   email: string ='';
   ageGroup: string = '';
   contactName : string = '';
@@ -40,7 +40,7 @@ export class RegistrationFormComponent implements OnInit{
     let data = {
       classDuration:this.classDuration, firstName:this.firstname, lastName:this.lastname, 
       gender:this.gender,address:this.street, city:this.city,
-      state:this.state, zip:this.zip, phoneNumber:this.phone, email:this.email, ageGroup:this.ageGroup,
+      state:this.state, zip:this.zip, phoneNumber:this.phoneNumber, email:this.email, ageGroup:this.ageGroup,
       contactName:this.contactName, contactPhone:this.contactPhone, contactRelationship:this.contactRelationship, 
       healthInformation:this.healthInformation, goodHealth:this.goodHealth, healthInsuranceCompany:this.healthInsuranceCompany,
       paymentType:this.paymentType, pastAttendance:this.pastAttendance, paymentCode:this.paymentCode
