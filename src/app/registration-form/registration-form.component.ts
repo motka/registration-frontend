@@ -37,11 +37,12 @@ export class RegistrationFormComponent implements OnInit{
   submit(): void {
     const apiUrl = environment.apiUrl;
     let data = {
-      classDuration:this.classDuration, firstName:this.firstname, lastName:this.lastname, gender:this.gender,address:this.street, city:this.city,
+      classDuration:this.classDuration, firstName:this.firstname, lastName:this.lastname, 
+      gender:this.gender,address:this.street, city:this.city,
       state:this.state, zip:this.zip, phoneNumber:this.phone, email:this.email, ageGroup:this.ageGroup,
       contactName:this.contactName, contactPhone:this.contactPhone, contactRelationship:this.contactRelationship, 
       healthInformation:this.healthInformation, isGoodHealth:this.isGoodHealth, healthInsuranceCompany:this.healthInsuranceCompany,
-      paymentType:this.paymentType, pastAttendance:this.pastAttendance
+      paymentType:this.paymentType, pastAttendance:this.pastAttendance, paymentCode:""
     };
     this.http.post(apiUrl+'/create', data).subscribe((response) => {
       this.router.navigate(["/"]);
