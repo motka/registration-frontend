@@ -13,7 +13,7 @@ export class ReportComponent implements OnInit{
   data: any[] = []
 
   displayedColumns: string[]=["classDuration","firstName", "lastName", "gender", "address", "city", "state", "zip",
-    "phone", "email", "ageGroup", "contactName", "contactPhone", "contactRelationship", "isGoodHealth",
+    "phoneNumber", "email", "ageGroup", "contactName", "contactPhone", "contactRelationship", "isGoodHealth",
     "healthInformation", "healthInsuranceCompany", "pastAttendance", "paymentType", "paymentCode"]
 
   constructor(private http: HttpClient, private router:Router) {
@@ -26,9 +26,9 @@ export class ReportComponent implements OnInit{
     response.forEach(item=>{
         let newItem: Record<string, any> = {};
         this.displayedColumns.forEach(name=>{
-          console.log(item[name])
+          console.log(name, ' == ',item[name])
           if(item[name] == undefined){
-            console.log(name)
+            console.log('undefined -->',name)
             newItem[name] = "";
           }else newItem[name]=item[name];
         })
