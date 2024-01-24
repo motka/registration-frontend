@@ -12,7 +12,7 @@ import { environment } from 'src/environments/environment';
 export class ReportComponent implements OnInit{
   data: any[] = []
 
-  displayedColumns: string[]=["classDuration","firstname", "lastname", "gender", "address", "city", "state", "zip",
+  displayedColumns: string[]=["classDuration","firstName", "lastName", "gender", "address", "city", "state", "zip",
     "phone", "email", "ageGroup", "contactName", "contactPhone", "contactRelationship", "isGoodHealth",
     "healthInformation", "healthInsuranceCompany", "pastAttendance", "paymentType", "paymentCode"]
 
