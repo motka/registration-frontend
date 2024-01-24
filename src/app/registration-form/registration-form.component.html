@@ -54,7 +54,7 @@
     <div class = "custom-row">
         <mat-form-field floatLabel="always">
             <mat-label>Phone Number:</mat-label>
-            <input matInput id="phone" [(ngModel)]="phone">
+            <input matInput id="phone" [(ngModel)]="phoneNumber">
         </mat-form-field>
         <mat-form-field floatLabel="always">
             <mat-label>Email Address</mat-label>
@@ -90,7 +90,7 @@
     Health Information:
     <div class="health-info">
         <div>
-            <mat-checkbox [(ngModel)]="isGoodHealth" name="good">Good Health</mat-checkbox>
+            <mat-checkbox [(ngModel)]="goodHealth" name="goodHealth">Good Health</mat-checkbox>
         </div>     
         <div>If not good, please state your current condition and medical need:</div>       
         <mat-form-field>
