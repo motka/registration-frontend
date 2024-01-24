@@ -22,7 +22,7 @@ export class RegistrationFormComponent implements OnInit{
   contactName : string = '';
   contactPhone : string = '';
   contactRelationship: string= '';
-  isGoodHealth: boolean = false;
+  goodHealth: boolean = false;
   healthInformation: string='';
   healthInsuranceCompany: string='';
   gender: string='';
@@ -42,7 +42,7 @@ export class RegistrationFormComponent implements OnInit{
       gender:this.gender,address:this.street, city:this.city,
       state:this.state, zip:this.zip, phoneNumber:this.phone, email:this.email, ageGroup:this.ageGroup,
       contactName:this.contactName, contactPhone:this.contactPhone, contactRelationship:this.contactRelationship, 
-      healthInformation:this.healthInformation, isGoodHealth:this.isGoodHealth, healthInsuranceCompany:this.healthInsuranceCompany,
+      healthInformation:this.healthInformation, goodHealth:this.goodHealth, healthInsuranceCompany:this.healthInsuranceCompany,
       paymentType:this.paymentType, pastAttendance:this.pastAttendance, paymentCode:this.paymentCode
     };
     this.http.post(apiUrl+'/create', data).subscribe((response) => {
