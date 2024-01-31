@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router }from '@angular/router';
 import { environment } from 'src/environments/environment';
+import * as jsonData from 'src/assets/data.json';
 
 
 @Component({
@@ -31,12 +32,18 @@ export class RegistrationFormComponent implements OnInit{
   paymentType: string='';
   paymentCode: string='';
   // Access API URL
- 
+  apiUrl = environment.apiUrl;
              
   constructor(private http: HttpClient, private router: Router) {
   }
+
+  ngOnInit(): void {
+    console.log("Name :", jsonData.teacherName);
+    throw new Error('Method not implemented.');
+  }
+
   submit(): void {
-    const apiUrl = environment.apiUrl;
+   
     let data = {
       classDuration:this.classDuration, firstName:this.firstname, lastName:this.lastname, 
       gender:this.gender,address:this.street, city:this.city,
@@ -45,13 +52,28 @@ export class RegistrationFormComponent implements OnInit{
       healthInformation:this.healthInformation, goodHealth:this.goodHealth, healthInsuranceCompany:this.healthInsuranceCompany,
       paymentType:this.paymentType, pastAttendance:this.pastAttendance, paymentCode:this.paymentCode
     };
-    this.http.post(apiUrl+'/create', data).subscribe((response) => {
+    this.http.post(this.apiUrl+'/create', data).subscribe((response) => {
       this.router.navigate(["/"]);
   })
   }
 
-
-
-  ngOnInit(): void {
-  }
+  // generatePDF(): void {
+  //   // Make an HTTP request to the Spring backend to generate PDF
+  //   this.http.get<any[]>(this.apiUrl+'/generate-pdf').subscribe((response) => {
+  //     let result: any[] = [];  
+  //     response.forEach(item=>{
+  //       let newItem: Record<string, any> = {};
+  //       this.displayedColumns.forEach(name=>{
+  //         console.log(name, ' == ',item[name])
+  //         if(item[name] == undefined){
+  //           console.log('undefined -->',name)
+  //           newItem[name] = "";
+  //         }else newItem[name]=item[name];
+  //       })
+  //       result.push(newItem);
+  //     })
+  //     this.data = result;
+  //     this.router.navigate(["showReport"]);
+  //} 
+ 
 }

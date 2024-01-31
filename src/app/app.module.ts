@@ -15,7 +15,7 @@ import { RegistrationFormComponent } from './registration-form/registration-form
 import { ReportComponent } from './report/report.component';
 import { MatTableModule } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatCheckboxModule } from '@angular/material/checkbox'; 
 
 @NgModule({
   declarations: [
