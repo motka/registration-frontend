@@ -38,7 +38,9 @@ export class RegistrationFormComponent implements OnInit{
   }
 
   ngOnInit(): void {
+
     console.log("Name :", jsonData.teacherName);
+    console.log("From  :", jsonData.from);
     throw new Error('Method not implemented.');
   }
 
