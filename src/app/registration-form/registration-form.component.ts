@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router }from '@angular/router';
 import { environment } from 'src/environments/environment';
-import * as jsonData from 'src/assets/data.json';
+import jsonData from 'src/assets/data.json';
 
 
 @Component({
@@ -33,13 +33,19 @@ export class RegistrationFormComponent implements OnInit{
   paymentCode: string='';
   // Access API URL
   apiUrl = environment.apiUrl;
+  teacherName = jsonData.teacherName;
+  retreatYear = jsonData.retreatYear;
+  from = jsonData.from;
+  to = jsonData.to;
              
   constructor(private http: HttpClient, private router: Router) {
+   
+    console.log("url :", this.apiUrl);
+    console.log("Name :", this.teacherName);
   }
 
-  ngOnInit(): void {
-    console.log("Name :", jsonData.teacherName);
-    throw new Error('Method not implemented.');
+  ngOnInit(): void { 
+   // throw new Error('Method not implemented.');
   }
 
   submit(): void {
